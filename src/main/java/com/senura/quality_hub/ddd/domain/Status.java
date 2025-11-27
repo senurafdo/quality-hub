@@ -1,4 +1,4 @@
-package com.senura.quality_hub.domain;
+package com.senura.quality_hub.ddd.domain;
 
 public enum Status {
     IDEA,
