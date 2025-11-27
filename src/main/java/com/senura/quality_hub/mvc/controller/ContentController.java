@@ -2,6 +2,7 @@ package com.senura.quality_hub.mvc.controller;
 
 import com.senura.quality_hub.mvc.model.Content;
 import com.senura.quality_hub.mvc.repository.ContentCollectionRepository;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -32,7 +33,7 @@ public class ContentController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/create")
-    public void createContent(@RequestBody Content content) {
+    public void createContent(@Valid @RequestBody Content content) {
         repository.save(content);
     }
 
